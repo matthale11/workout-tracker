@@ -1,21 +1,14 @@
 const router = require("express").Router();
+const path = require("path");
 
-// TODO: /exercise
-router.get("/exercise", async (req, res) => {
-  try {
-    res.render("exercise");
-  } catch (err) {
-    res.status.json(err);
-  }
+// Route to the exercise page
+router.get("/exercise", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/exercise.html"));
 });
 
-// TODO: /stats
-router.get("/stats", async (req, res) => {
-  try {
-    res.render("stats");
-  } catch (err) {
-    res.status.json(err);
-  }
+// Route to the stats page
+router.get("/stats", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/stats.html"));
 });
 
 module.exports = router;
