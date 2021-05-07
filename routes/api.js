@@ -50,7 +50,7 @@ router.post("/api/workouts/", ({ body }, res) => {
 // GET last seven workouts
 router.get("/api/workouts/range", (req, res) => {
   Workout.find({})
-    .sort({ date: -1 })
+    .sort({ day: -1 })
     .limit(7)
     .then((dbWorkout) => {
       res.json(dbWorkout);
