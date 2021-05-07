@@ -47,6 +47,17 @@ router.post("/api/workouts/", ({ body }, res) => {
     });
 });
 
-// TODO:  GET workouts in range api/workouts/range chaining .sort and .limit
+// GET last seven workouts
+router.get("/api/workouts/range", (req, res) => {
+  Workout.find({})
+    .sort({ date: -1 })
+    .limit(7)
+    .then((dbWorkout) => {
+      res.json(dbWorkout);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
+});
 
 module.exports = router;
