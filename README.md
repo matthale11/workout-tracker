@@ -4,6 +4,6 @@ This application allows users to view, create, and track daily workouts. Users a
 ## Instructions
 Once you have loaded the app, select create new workout and an exercise by choosing between Resistance and Cardio and then providing information about the exercise (name, weight, sets, reps, and duration for resistance and name, distance, and duration for cardio). Once the form is complete, you can choose to Complete the workout for that day or Add Exercise to add additional exercises for that day. Upon completing a workout, you are returned to the homepage where you see your last workout. To view your stats, select Dashboard from the navigation on the homepage to view charts illustrating your progress.
 
-[Deployed App]()
+[Deployed App](https://stormy-brook-70744.herokuapp.com/)
 
 ![App Screenshot](screenshot.png)
